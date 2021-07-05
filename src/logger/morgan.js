@@ -1,6 +1,5 @@
-import morgan from "morgan";
-
-import Logger from "./logger";
+const morgan = require("morgan");
+const Logger = require("./logger");
 
 // Override the stream method by telling
 // Morgan to use our custom logger instead of the console.log.
@@ -31,4 +30,4 @@ const morganMiddleware = morgan(
   { stream, skip }
 );
 
-export default morganMiddleware;
+module.exports = morganMiddleware;
