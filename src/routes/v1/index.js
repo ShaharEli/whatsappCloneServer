@@ -7,7 +7,8 @@ const unknownEndpoint = (req, res) => {
   res.status(404).send({ error: "unknown endpoint" });
 };
 
-router.use(authRouter);
+router.use("/auth", authRouter);
+
 router.use(checkToken);
 
 router.use(unknownEndpoint);

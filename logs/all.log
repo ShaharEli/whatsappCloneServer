@@ -1,145 +1,91 @@
-2021-07-05 01:21:49:2149 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:47:36:4736 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:47:42:4742 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:48:05:485 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:48:11:4811 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:48:36:4836 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:48:55:4855 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:49:27:4927 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:49:32:4932 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:50:04:504 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:50:30:5030 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:50:48:5048 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:50:58:5058 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:52:04:524 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:53:17:5317 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:53:34:5334 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:56:27:5627 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:57:04:574 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:57:04:574 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 02:57:34:5734 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:57:34:5734 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 02:58:12:5812 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:58:12:5812 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 02:58:16:5816 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:58:16:5816 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 02:58:22:5822 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:58:22:5822 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 02:58:29:5829 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:58:29:5829 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 02:59:01:591 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:59:01:591 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 02:59:13:5913 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:59:13:5913 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 02:59:31:5931 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 02:59:31:5931 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:00:08:08 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:00:08:08 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:00:41:041 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:00:41:041 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:01:07:17 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:01:07:17 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:01:12:112 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:01:12:112 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:02:22:222 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:02:22:222 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:03:23:323 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:03:23:323 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:07:37:737 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:07:37:737 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:08:06:86 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:08:06:86 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:08:12:812 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:08:12:812 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:09:41:941 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:09:41:941 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:10:01:101 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:10:01:101 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:10:18:1018 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:10:18:1018 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:10:19:1019 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:10:19:1019 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:11:35:1135 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:11:35:1135 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:11:43:1143 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:11:43:1143 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:12:40:1240 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:12:40:1240 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:13:00:130 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:13:00:130 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:13:31:1331 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:13:31:1331 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:13:43:1343 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:13:43:1343 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:14:03:143 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:14:03:143 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:14:13:1413 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:14:13:1413 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:17:04:174 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:17:04:174 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:17:32:1732 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:17:32:1732 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:20:01:201 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:20:01:201 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:20:58:2058 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:20:58:2058 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:21:10:2110 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:21:10:2110 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:21:32:2132 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:21:32:2132 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:21:43:2143 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:21:43:2143 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:21:55:2155 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:21:55:2155 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:22:10:2210 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:22:10:2210 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:22:35:2235 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:22:35:2235 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:23:12:2312 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:23:12:2312 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:23:33:2333 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:23:33:2333 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:24:14:2414 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:24:14:2414 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:25:12:2512 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:25:12:2512 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:25:57:2557 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:25:57:2557 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:26:56:2656 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:26:56:2656 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:27:12:2712 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:27:12:2712 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:33:59:3359 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:33:59:3359 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:37:59:3759 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:37:59:3759 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:39:26:3926 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:39:26:3926 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:39:31:3931 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:39:31:3931 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:39:39:3939 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:39:39:3939 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:39:42:3942 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:39:42:3942 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:39:44:3944 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:39:44:3944 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:40:22:4022 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:40:22:4022 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:40:43:4043 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:40:43:4043 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:41:19:4119 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:41:19:4119 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:41:49:4149 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:41:49:4149 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:42:12:4212 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:42:12:4212 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:42:49:4249 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:42:49:4249 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:55:28:5528 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:55:28:5528 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:56:44:5644 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:56:44:5644 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:56:55:5655 [32minfo[39m: [32mserver running on port 8080[39m
-2021-07-05 03:56:55:5655 [32minfo[39m: [32mconnected to database[39m
-2021-07-05 03:56:59:5659 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 400 25 - 2.860 ms[39m
+2021-07-06 21:24:08:248 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:24:08:248 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:24:33:2433 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:24:33:2433 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:25:12:2512 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:25:12:2512 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:26:02:262 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:26:02:262 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:28:24:2824 [35mhttp[39m: [35mPOST /api/v1/auth/login 400 25 - 2.365 ms[39m
 [35m[39m
+2021-07-06 21:29:01:291 [35mhttp[39m: [35mPOST /api/v1/auth/login 400 25 - 0.658 ms[39m
+[35m[39m
+2021-07-06 21:30:40:3040 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:30:40:3040 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:30:44:3044 [35mhttp[39m: [35mPOST /api/v1/auth/login 400 25 - 3.152 ms[39m
+[35m[39m
+2021-07-06 21:30:49:3049 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:30:49:3049 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:33:19:3319 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:33:19:3319 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:33:21:3321 [35mhttp[39m: [35mPOST /api/v1/auth/login 404 28 - 1.860 ms[39m
+[35m[39m
+2021-07-06 21:33:28:3328 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:33:28:3328 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:34:34:3434 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:34:34:3434 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:34:38:3438 [35mhttp[39m: [35mGET /api/v1/auth/login-with-token 400 25 - 3.036 ms[39m
+[35m[39m
+2021-07-06 21:34:47:3447 [35mhttp[39m: [35mPOST /api/v1/auth/login 400 25 - 0.496 ms[39m
+[35m[39m
+2021-07-06 21:35:05:355 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:35:05:355 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:35:08:358 [35mhttp[39m: [35mPOST /api/v1/auth/login 400 27 - 2.385 ms[39m
+[35m[39m
+2021-07-06 21:35:44:3544 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:35:44:3544 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:35:46:3546 [35mhttp[39m: [35mPOST /api/v1/auth/login 400 27 - 3.758 ms[39m
+[35m[39m
+2021-07-06 21:36:27:3627 [35mhttp[39m: [35mPOST /api/v1/auth/login 400 27 - 0.879 ms[39m
+[35m[39m
+2021-07-06 21:37:13:3713 [35mhttp[39m: [35mPOST /api/v1/auth/login 400 27 - 0.613 ms[39m
+[35m[39m
+2021-07-06 21:39:36:3936 [31merror[39m: [31mOperation `users.find()` buffering timed out after 10000ms[39m
+2021-07-06 21:39:36:3936 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 26 - 10006.950 ms[39m
+[35m[39m
+2021-07-06 21:39:41:3941 [31merror[39m: [31mOperation `users.find()` buffering timed out after 10000ms[39m
+2021-07-06 21:39:41:3941 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 26 - 10006.550 ms[39m
+[35m[39m
+2021-07-06 21:43:19:4319 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:43:21:4321 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:45:35:4535 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:45:36:4536 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:45:39:4539 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:45:39:4539 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:46:00:460 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:46:00:460 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:46:03:463 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 86.716 ms[39m
+[35m[39m
+2021-07-06 21:46:50:4650 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:46:51:4651 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:46:53:4653 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 95.390 ms[39m
+[35m[39m
+2021-07-06 21:47:06:476 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:47:07:477 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:47:08:478 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 94.850 ms[39m
+[35m[39m
+2021-07-06 21:47:25:4725 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:47:26:4726 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:47:56:4756 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 89.137 ms[39m
+[35m[39m
+2021-07-06 21:47:59:4759 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 71.792 ms[39m
+[35m[39m
+2021-07-06 21:48:27:4827 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 76.923 ms[39m
+[35m[39m
+2021-07-06 21:48:31:4831 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 76.168 ms[39m
+[35m[39m
+2021-07-06 21:50:12:5012 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 70.512 ms[39m
+[35m[39m
+2021-07-06 21:50:16:5016 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 76.257 ms[39m
+[35m[39m
+2021-07-06 21:51:08:518 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:51:09:519 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:53:10:5310 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:53:11:5311 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:57:05:575 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:57:27:5727 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:57:27:5727 [32minfo[39m: [32mconnected to database[39m
+2021-07-06 21:57:50:5750 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-06 21:57:51:5751 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 01:36:52:3652 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 01:36:53:3653 [32minfo[39m: [32mconnected to database[39m

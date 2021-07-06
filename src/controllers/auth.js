@@ -6,7 +6,16 @@ const {
   generateAccessToken,
 } = require("../utils/tokens.util");
 
-const login = async () => {};
+const login = async (req, res) => {
+  const { password, phone } = req.body;
+  if (!password || !phone) createError("content missing", 400);
+  const user = await User.findOne({ phone });
+  if (!user) createError("error occurred", 500);
+  const isPassOk = await bcrypt.compare(user.password, password);
+  if (!isPassOk) createError("error occurred", 500);
+  delete user.password;
+  res.json(user);
+};
 
 const loginWithToken = async (req, res) => {
   const { refreshToken } = req.body;
@@ -21,7 +30,9 @@ const loginWithToken = async (req, res) => {
 
 const verifyMail = async () => {};
 
-const register = async () => {};
+const register = async (req, res) => {
+  const { firstName, lastName, phone, avatar, email } = req.body;
+};
 
 const getToken = async () => {};
 
