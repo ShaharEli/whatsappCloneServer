@@ -14,10 +14,12 @@ const login = async (req, res) => {
   if (!password || !phone) createError("content missing", 400);
   const user = await User.findOne({ phone });
   if (!user) createError("error occurred", 500);
-  const isPassOk = await bcrypt.compare(user.password, password);
-  if (!isPassOk) createError("error occurred", 500);
+  const isPassOk = bcrypt.compareSync(password, user.password);
+  if (!isPassOk) createError("One of the fields incorrect", 500); //TODO better response
   delete user.password;
-  res.json(user);
+  const accessToken = generateAccessToken(user._id);
+  const refreshToken = await generateRefreshToken(user._id);
+  res.json({ accessToken, refreshToken, user });
 };
 
 const loginWithToken = async (req, res) => {
@@ -27,6 +29,7 @@ const loginWithToken = async (req, res) => {
   if (!userId) createError("invalid token", 400);
   const user = await User.findById(userId.data);
   if (!user) createError("error occurred", 500);
+  delete user.password;
   const accessToken = generateAccessToken(userId);
   res.json({ user, accessToken });
 };
@@ -53,6 +56,7 @@ const register = async (req, res) => {
     const accessToken = generateAccessToken(user._id);
     const refreshToken = await generateRefreshToken(user._id);
     delete user.password;
+    // TODO send mail
     res.json({ user, accessToken, refreshToken });
   } catch (err) {
     Logger.error(err);

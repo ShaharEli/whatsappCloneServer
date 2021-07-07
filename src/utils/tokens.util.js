@@ -25,7 +25,7 @@ const generateRefreshToken = async (id) => {
   try {
     const user = await User.findById(id);
     if (!user) throw new Error("user not found");
-    await RefreshToken.deleteMany({ userID: id });
+    await RefreshToken.deleteMany({ userId: id });
 
     const token = jwt.sign(
       {
@@ -42,6 +42,7 @@ const generateRefreshToken = async (id) => {
     await newRefreshToken.save();
     return token;
   } catch ({ message }) {
+    //TODO   throw err 500
     Logger.error(message);
   }
 };

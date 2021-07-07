@@ -8,7 +8,7 @@ const safeRoute = async (req, res, cb) => {
       return res.status(e.status).json({ error: e.customMessage });
     }
     Logger.error(e.message);
-    return res.json({ error: "error occurred" });
+    return res.status(500).json({ error: "error occurred" });
   }
 };
 

@@ -176,3 +176,174 @@
 2021-07-07 03:50:39:5039 [32minfo[39m: [32mconnected to database[39m
 2021-07-07 03:50:44:5044 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 511 - 108.268 ms[39m
 [35m[39m
+2021-07-07 13:40:39:4039 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:40:40:4040 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:41:14:4114 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 511 - 95.850 ms[39m
+[35m[39m
+2021-07-07 13:43:49:4349 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-07 13:43:49:4349 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 26 - 302.064 ms[39m
+[35m[39m
+2021-07-07 13:45:34:4534 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-07 13:45:34:4534 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 26 - 220.879 ms[39m
+[35m[39m
+2021-07-07 13:45:35:4535 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-07 13:45:35:4535 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 26 - 148.890 ms[39m
+[35m[39m
+2021-07-07 13:45:35:4535 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-07 13:45:35:4535 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 26 - 83.830 ms[39m
+[35m[39m
+2021-07-07 13:45:36:4536 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-07 13:45:36:4536 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 26 - 458.346 ms[39m
+[35m[39m
+2021-07-07 13:45:36:4536 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-07 13:45:36:4536 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 26 - 344.511 ms[39m
+[35m[39m
+2021-07-07 13:46:00:460 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:46:01:461 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:46:02:462 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-07 13:46:02:462 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 26 - 243.964 ms[39m
+[35m[39m
+2021-07-07 13:46:45:4645 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:46:46:4646 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:46:47:4647 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-07 13:46:47:4647 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 26 - 240.532 ms[39m
+[35m[39m
+2021-07-07 13:47:31:4731 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:47:32:4732 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:47:32:4732 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-07 13:47:32:4732 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 26 - 239.054 ms[39m
+[35m[39m
+2021-07-07 13:48:07:487 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:48:08:488 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:48:27:4827 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:48:27:4827 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:48:29:4829 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-07 13:48:29:4829 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 236.123 ms[39m
+[35m[39m
+2021-07-07 13:48:56:4856 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:48:56:4856 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:48:58:4858 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-07 13:48:58:4858 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 235.023 ms[39m
+[35m[39m
+2021-07-07 13:53:03:533 [35mhttp[39m: [35mPOST /api/v1/auth/register 200 92678 - 755.789 ms[39m
+[35m[39m
+2021-07-07 13:54:06:546 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:54:07:547 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:54:16:5416 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 500 26 - 83.372 ms[39m
+[35m[39m
+2021-07-07 13:55:23:5523 [35mhttp[39m: [35mPOST /api/v1/auth/register 200 92752 - 751.055 ms[39m
+[35m[39m
+2021-07-07 13:55:48:5548 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 228.668 ms[39m
+[35m[39m
+2021-07-07 13:56:44:5644 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:56:45:5645 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:56:46:5646 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 238.835 ms[39m
+[35m[39m
+2021-07-07 13:57:08:578 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:57:09:579 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:57:09:579 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 228.266 ms[39m
+[35m[39m
+2021-07-07 13:57:11:5711 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 224.613 ms[39m
+[35m[39m
+2021-07-07 13:57:11:5711 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 152.163 ms[39m
+[35m[39m
+2021-07-07 13:57:12:5712 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 391.518 ms[39m
+[35m[39m
+2021-07-07 13:57:12:5712 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 561.795 ms[39m
+[35m[39m
+2021-07-07 13:57:12:5712 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 374.456 ms[39m
+[35m[39m
+2021-07-07 13:57:13:5713 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 646.233 ms[39m
+[35m[39m
+2021-07-07 13:57:27:5727 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 229.124 ms[39m
+[35m[39m
+2021-07-07 13:57:34:5734 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 26 - 225.800 ms[39m
+[35m[39m
+2021-07-07 13:58:04:584 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:58:05:585 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:58:05:585 [35mhttp[39m: [35mPOST /api/v1/auth/login 500 39 - 234.379 ms[39m
+[35m[39m
+2021-07-07 13:58:22:5822 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:58:23:5823 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:59:52:5952 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 13:59:53:5953 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 13:59:54:5954 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 92752 - 514.186 ms[39m
+[35m[39m
+2021-07-07 13:59:59:5959 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 14:00:00:00 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 14:00:47:047 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 247.593 ms[39m
+[35m[39m
+2021-07-07 14:00:47:047 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 189.915 ms[39m
+[35m[39m
+2021-07-07 14:02:31:231 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 217.347 ms[39m
+[35m[39m
+2021-07-07 14:02:33:233 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 227.933 ms[39m
+[35m[39m
+2021-07-07 14:03:10:310 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 14:03:11:311 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 14:04:26:426 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 14:04:27:427 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 14:05:28:528 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 14:05:29:529 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 14:05:31:531 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 234.674 ms[39m
+[35m[39m
+2021-07-07 14:05:33:533 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 223.900 ms[39m
+[35m[39m
+2021-07-07 14:06:08:68 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 14:06:09:69 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 14:06:10:610 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 14:06:11:611 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 14:07:05:75 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 240.882 ms[39m
+[35m[39m
+2021-07-07 14:07:07:77 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 227.605 ms[39m
+[35m[39m
+2021-07-07 14:07:27:727 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 291.150 ms[39m
+[35m[39m
+2021-07-07 14:07:28:728 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 83.522 ms[39m
+[35m[39m
+2021-07-07 14:07:32:732 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 221.886 ms[39m
+[35m[39m
+2021-07-07 14:07:34:734 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 226.388 ms[39m
+[35m[39m
+2021-07-07 14:09:20:920 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 220.054 ms[39m
+[35m[39m
+2021-07-07 14:09:20:920 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 84.118 ms[39m
+[35m[39m
+2021-07-07 14:09:45:945 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 225.822 ms[39m
+[35m[39m
+2021-07-07 14:09:45:945 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 136.184 ms[39m
+[35m[39m
+2021-07-07 14:10:13:1013 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 217.518 ms[39m
+[35m[39m
+2021-07-07 14:10:15:1015 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 217.672 ms[39m
+[35m[39m
+2021-07-07 14:11:12:1112 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 219.361 ms[39m
+[35m[39m
+2021-07-07 14:11:12:1112 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 218.601 ms[39m
+[35m[39m
+2021-07-07 14:11:14:1114 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 219.471 ms[39m
+[35m[39m
+2021-07-07 14:11:16:1116 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 221.591 ms[39m
+[35m[39m
+2021-07-07 14:11:25:1125 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 222.556 ms[39m
+[35m[39m
+2021-07-07 14:11:25:1125 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 214.825 ms[39m
+[35m[39m
+2021-07-07 14:17:58:1758 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 220.684 ms[39m
+[35m[39m
+2021-07-07 14:20:08:208 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 216.081 ms[39m
+[35m[39m
+2021-07-07 14:33:14:3314 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 226.223 ms[39m
+[35m[39m
+2021-07-07 14:33:16:3316 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 222.594 ms[39m
+[35m[39m
+2021-07-07 14:33:49:3349 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 225.417 ms[39m
+[35m[39m
+2021-07-07 14:35:15:3515 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 217.737 ms[39m
+[35m[39m
+2021-07-07 14:49:49:4949 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 231.845 ms[39m
+[35m[39m
+2021-07-07 14:50:01:501 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 225.181 ms[39m
+[35m[39m
+2021-07-07 14:54:54:5454 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 92619 - 230.848 ms[39m
+[35m[39m
