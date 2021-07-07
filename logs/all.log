@@ -89,3 +89,90 @@
 2021-07-06 21:57:51:5751 [32minfo[39m: [32mconnected to database[39m
 2021-07-07 01:36:52:3652 [32minfo[39m: [32mserver running on port 8080[39m
 2021-07-07 01:36:53:3653 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:23:08:238 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:23:08:238 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:24:15:2415 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:24:16:2416 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:24:41:2441 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:24:41:2441 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:25:10:2510 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:25:11:2511 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:25:27:2527 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:25:28:2528 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:26:00:260 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:26:01:261 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:27:28:2728 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:27:29:2729 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:27:42:2742 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:27:43:2743 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:28:22:2822 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:28:22:2822 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:28:25:2825 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:28:26:2826 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:28:30:2830 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:28:31:2831 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:30:05:305 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:30:06:306 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:30:51:3051 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:30:52:3052 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:31:31:3131 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:31:32:3132 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:32:44:3244 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:32:45:3245 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:32:55:3255 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:32:55:3255 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:33:10:3310 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:33:11:3311 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:33:50:3350 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:33:51:3351 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:34:05:345 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:34:06:346 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:35:34:3534 [31merror[39m: [31merror is not defined[39m
+2021-07-07 03:35:34:3534 [35mhttp[39m: [35mPOST /api/v1/auth/register 200 26 - 7.509 ms[39m
+[35m[39m
+2021-07-07 03:36:41:3641 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:36:42:3642 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:36:43:3643 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:36:44:3644 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:36:47:3647 [35mhttp[39m: [35mPOST /api/v1/auth/register 400 12 - 5.094 ms[39m
+[35m[39m
+2021-07-07 03:37:19:3719 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:37:19:3719 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:38:20:3820 [35mhttp[39m: [35mPOST /api/v1/auth/register 400 12 - 10.346 ms[39m
+[35m[39m
+2021-07-07 03:38:42:3842 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:38:43:3843 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:39:08:398 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:39:09:399 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:40:02:402 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:40:03:403 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:40:04:404 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:40:05:405 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:40:37:4037 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:40:38:4038 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:41:43:4143 [35mhttp[39m: [35mPOST /api/v1/auth/register 200 92505 - 436.176 ms[39m
+[35m[39m
+2021-07-07 03:42:08:428 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 400 25 - 2.067 ms[39m
+[35m[39m
+2021-07-07 03:42:49:4249 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 400 25 - 0.617 ms[39m
+[35m[39m
+2021-07-07 03:44:45:4445 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 400 25 - 0.701 ms[39m
+[35m[39m
+2021-07-07 03:45:20:4520 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 400 25 - 0.615 ms[39m
+[35m[39m
+2021-07-07 03:47:57:4757 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:47:58:4758 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:48:42:4842 [35mhttp[39m: [35mPOST /api/v1/auth/register 200 644 - 452.216 ms[39m
+[35m[39m
+2021-07-07 03:49:21:4921 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:49:22:4922 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:49:29:4929 [31merror[39m: [31mCast to ObjectId failed for value "{ data: '60e4f9e96ee3c024f621dbf2', iat: 1625618922, exp: 1657176522 }" (type Object) at path "_id" for model "User"[39m
+2021-07-07 03:49:29:4929 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 26 - 12.742 ms[39m
+[35m[39m
+2021-07-07 03:49:37:4937 [31merror[39m: [31mCast to ObjectId failed for value "{ data: '60e4f9e96ee3c024f621dbf2', iat: 1625618922, exp: 1657176522 }" (type Object) at path "_id" for model "User"[39m
+2021-07-07 03:49:37:4937 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 26 - 2.092 ms[39m
+[35m[39m
+2021-07-07 03:50:38:5038 [32minfo[39m: [32mserver running on port 8080[39m
+2021-07-07 03:50:39:5039 [32minfo[39m: [32mconnected to database[39m
+2021-07-07 03:50:44:5044 [35mhttp[39m: [35mPOST /api/v1/auth/login-with-token 200 511 - 108.268 ms[39m
+[35m[39m

@@ -21,7 +21,7 @@ const verifyRefreshToken = (token) =>
     return decoded;
   });
 
-const generateRefreshTokenToken = async (id) => {
+const generateRefreshToken = async (id) => {
   try {
     const user = await User.findById(id);
     if (!user) throw new Error("user not found");
@@ -48,6 +48,6 @@ const generateRefreshTokenToken = async (id) => {
 
 module.exports = {
   generateAccessToken,
-  generateRefreshTokenToken,
+  generateRefreshToken,
   verifyRefreshToken,
 };
