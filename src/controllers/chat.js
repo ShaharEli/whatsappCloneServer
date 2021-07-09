@@ -16,7 +16,7 @@ const getAllChats = async (req, res) => {
   for (let chat of chats) {
     if (chat.type === "private") {
       populatedArr.push(
-        await chat
+        chat
           .populate({
             path: "participants",
             select: "avatar _id firstName lastName",
@@ -27,7 +27,7 @@ const getAllChats = async (req, res) => {
       populatedArr.push(chat);
     }
   }
-  res.json({ chats: populatedArr });
+  res.json({ chats: await Promise.all(populatedArr) });
 };
 
 const createGroupChat = async (req, res, participants, type, userId) => {}; //TODO implement

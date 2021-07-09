@@ -29,6 +29,10 @@ const socketHandler = (io) => {
         Logger.error(message);
       }
     });
+
+    socket.on("type", async (socket) => {
+      console.log(socket);
+    });
   });
 };
 
