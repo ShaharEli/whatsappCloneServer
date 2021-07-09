@@ -27,7 +27,7 @@ const loginWithToken = async (req, res) => {
   if (!refreshToken) createError("token missing", 400);
   const userId = verifyRefreshToken(refreshToken);
   if (!userId) createError("invalid token", 400);
-  const user = await User.findById(userId.data);
+  const user = await User.findById(userId.userId);
   if (!user) createError("error occurred", 500);
   delete user.password;
   const accessToken = generateAccessToken(userId);
@@ -64,7 +64,14 @@ const register = async (req, res) => {
   }
 };
 
-const getToken = async () => {};
+const getToken = async (req, res) => {
+  const { refreshToken } = req.body;
+  if (!refreshToken) createError("token missing", 400);
+  const userId = verifyRefreshToken(refreshToken);
+  if (!userId) createError("invalid token", 400);
+  const accessToken = generateAccessToken(userId);
+  res.json({ accessToken });
+};
 
 module.exports = {
   login,

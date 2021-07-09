@@ -6,10 +6,12 @@ const userDbSchema = new mongoose.Schema(
     lastName: { type: String, required: true },
     isActive: { type: Boolean, default: false },
     lastConnected: { type: Date, default: new Date() },
-    phone: { type: String, required: true, uniq: true },
+    phone: { type: String, required: true, index: true, unique: true },
     avatar: { type: String },
     email: { type: String, required: true },
     password: { type: String, required: true },
+    role: { type: String, default: "user", enum: ["admin", "user"] },
+    status: { type: String, default: "" },
   },
   { timestamps: true }
 );
@@ -21,5 +23,5 @@ userDbSchema.set("toJSON", {
 });
 
 const User = mongoose.model("User", userDbSchema);
-
+User.createIndexes();
 module.exports = User;

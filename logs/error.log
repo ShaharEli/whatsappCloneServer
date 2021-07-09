@@ -14,3 +14,34 @@
 2021-07-07 13:47:32:4732 [31merror[39m: [31mIllegal arguments: undefined, string[39m
 2021-07-07 13:48:29:4829 [31merror[39m: [31mIllegal arguments: undefined, string[39m
 2021-07-07 13:48:58:4858 [31merror[39m: [31mIllegal arguments: undefined, string[39m
+2021-07-08 17:42:17:4217 [31merror[39m: [31mUser.findOneAndModify is not a function[39m
+2021-07-08 17:42:19:4219 [31merror[39m: [31mUser.findOneAndModify is not a function[39m
+2021-07-08 21:29:45:2945 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:29:45:2945 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:29:47:2947 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:29:47:2947 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:44:16:4416 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:44:47:4447 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:44:48:4448 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:44:48:4448 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:44:50:4450 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:45:56:4556 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:46:26:4626 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:46:27:4627 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:46:28:4628 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 21:46:30:4630 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-08 22:01:26:126 [31merror[39m: [31mconnection 6 to 18.159.233.182:27017 closed[39m
+2021-07-09 00:30:43:3043 [31merror[39m: [31mE11000 duplicate key error collection: whatsappClone.users index: phone_1 dup key: { phone: "0509877219" }[39m
+2021-07-09 03:05:34:534 [31merror[39m: [31mfoundUsers is not defined[39m
+2021-07-09 03:07:35:735 [31merror[39m: [31mCannot read property 'length' of undefined[39m
+2021-07-09 15:33:41:3341 [31merror[39m: [31mChat.find(...).populate(...).execPopulate is not a function[39m
+2021-07-09 15:34:05:345 [31merror[39m: [31mCast to ObjectId failed for value "{[39m
+[31m  userId: '60e5881af4b2fa4016bf76d5',[39m
+[31m  iat: 1625787358,[39m
+[31m  exp: 1657344958[39m
+[31m}" (type Object) at path "participants" for model "Chat"[39m
+2021-07-09 15:34:07:347 [31merror[39m: [31mCast to ObjectId failed for value "{[39m
+[31m  userId: '60e5881af4b2fa4016bf76d5',[39m
+[31m  iat: 1625787358,[39m
+[31m  exp: 1657344958[39m
+[31m}" (type Object) at path "participants" for model "Chat"[39m

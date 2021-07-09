@@ -2,12 +2,21 @@ const jwt = require("jsonwebtoken");
 const RefreshToken = require("../db/schemas/refreshToken");
 const User = require("../db/schemas/user");
 const Logger = require("../logger/logger");
+const createError = require("./createError.util");
 require("dotenv").config();
+
+const verifyAccessToken = (token) =>
+  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
+    if (err) {
+      return false;
+    }
+    return decoded;
+  });
 
 const generateAccessToken = (id) =>
   jwt.sign(
     {
-      data: id,
+      userId: id,
     },
     process.env.ACCESS_TOKEN_SECRET,
     { expiresIn: "15m" }
@@ -29,7 +38,7 @@ const generateRefreshToken = async (id) => {
 
     const token = jwt.sign(
       {
-        data: id,
+        userId: id,
       },
       process.env.REFRESH_TOKEN_SECRET,
       { expiresIn: "1y" }
@@ -42,7 +51,8 @@ const generateRefreshToken = async (id) => {
     await newRefreshToken.save();
     return token;
   } catch ({ message }) {
-    //TODO   throw err 500
+    createMessage(message, 402);
+    //TODO  change status
     Logger.error(message);
   }
 };
@@ -51,4 +61,5 @@ module.exports = {
   generateAccessToken,
   generateRefreshToken,
   verifyRefreshToken,
+  verifyAccessToken,
 };

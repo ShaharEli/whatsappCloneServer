@@ -1,6 +1,8 @@
 const { Router } = require("express");
 const checkToken = require("../../middelwares/checkToken");
 const authRouter = require("./auth");
+const chatRouter = require("./chat");
+const contactsRouter = require("./contacts");
 const router = Router();
 
 const unknownEndpoint = (req, res) => {
@@ -10,6 +12,9 @@ const unknownEndpoint = (req, res) => {
 router.use("/auth", authRouter);
 
 router.use(checkToken);
+
+router.use("/contacts", contactsRouter);
+router.use("/chat", chatRouter);
 
 router.use(unknownEndpoint);
 
