@@ -15,6 +15,7 @@ const chatDbSchema = new mongoose.Schema(
     deletedAt: { type: Date },
     name: { type: String },
     description: { type: String },
+    image: { type: String },
   },
   { timestamps: true }
 );

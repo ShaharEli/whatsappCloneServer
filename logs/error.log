@@ -45,3 +45,4 @@
 [31m  iat: 1625787358,[39m
 [31m  exp: 1657344958[39m
 [31m}" (type Object) at path "participants" for model "Chat"[39m
+2021-07-09 19:04:01:41 [31merror[39m: [31mparticipants is not defined[39m
