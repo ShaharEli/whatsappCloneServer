@@ -6,6 +6,7 @@ const userDbSchema = new mongoose.Schema(
     lastName: { type: String, required: true },
     isActive: { type: Boolean, default: false },
     lastConnected: { type: Date, default: new Date() },
+    socketId: { type: String },
     phone: { type: String, required: true, index: true, unique: true },
     avatar: { type: String },
     email: { type: String, required: true },

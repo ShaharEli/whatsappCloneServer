@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(helmet());
 app.use(loggerMiddleWare);
 app.use("/api", routes);
-
 socketHandler(io);
+app.set("socketio", io);
 
 module.exports = server;

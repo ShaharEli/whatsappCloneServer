@@ -9,6 +9,12 @@ const {
 } = require("../../controllers/auth");
 
 require("dotenv").config();
+const rateLimit = require("express-rate-limit");
+
+const apiLimiter = rateLimit({
+  windowMs: 30 * 1000, // 15 minutes
+  max: 10,
+});
 
 const authRouter = Router();
 
@@ -18,7 +24,9 @@ authRouter.post("/login-with-token", (req, res) =>
   withTryCatch(req, res, loginWithToken)
 );
 
-authRouter.post("/get-token", (req, res) => withTryCatch(req, res, getToken));
+authRouter.post("/get-token", apiLimiter, (req, res) =>
+  withTryCatch(req, res, getToken)
+);
 
 authRouter.post("/register", (req, res) => withTryCatch(req, res, register));
 

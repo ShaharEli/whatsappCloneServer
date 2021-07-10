@@ -10,7 +10,6 @@ const chatDbSchema = new mongoose.Schema(
     mainAdmin: { ref: "User", type: mongoose.Schema.Types.ObjectId },
     admins: { ref: "User", type: [mongoose.Schema.Types.ObjectId] },
     lastMessage: { ref: "Message", type: mongoose.Schema.Types.ObjectId },
-    usersTyping: { ref: "User", type: [mongoose.Schema.Types.ObjectId] },
     participants: { ref: "User", type: [mongoose.Schema.Types.ObjectId] },
     deletedAt: { type: Date },
     name: { type: String },

@@ -9,16 +9,11 @@ const messageDbSchema = new mongoose.Schema(
     content: { type: String, required: true },
     type: {
       type: String,
-      default: "message",
-      enum: ["message", "voice", "video", "image"],
+      default: "text",
+      enum: ["text", "voice", "video", "image"],
     },
     seenBy: { ref: "User", type: [mongoose.Schema.Types.ObjectId] },
     chatId: { ref: "Chat", type: mongoose.Schema.Types.ObjectId },
-    status: {
-      type: String,
-      default: "sending",
-      enum: ["sending", "sent", "received"],
-    },
   },
   { timestamps: true }
 );
@@ -29,5 +24,5 @@ messageDbSchema.set("toJSON", {
   },
 });
 
-const Message = mongoose.model("Chat", messageDbSchema);
+const Message = mongoose.model("Message", messageDbSchema);
 module.exports = Message;
