@@ -6,6 +6,7 @@ const {
   register,
   verifyMail,
   loginWithToken,
+  logErrorToService,
 } = require("../../controllers/auth");
 
 require("dotenv").config();
@@ -19,6 +20,10 @@ const apiLimiter = rateLimit({
 const authRouter = Router();
 
 authRouter.post("/login", (req, res) => withTryCatch(req, res, login));
+
+authRouter.post("/error", (req, res) =>
+  withTryCatch(req, res, logErrorToService)
+);
 
 authRouter.post("/login-with-token", (req, res) =>
   withTryCatch(req, res, loginWithToken)

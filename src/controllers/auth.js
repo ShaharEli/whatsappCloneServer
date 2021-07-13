@@ -1,4 +1,5 @@
 const bcrypt = require("bcryptjs");
+const Error = require("../db/schemas/error");
 const User = require("../db/schemas/user");
 const Logger = require("../logger/logger");
 const createError = require("../utils/createError.util");
@@ -8,6 +9,22 @@ const {
   generateRefreshToken,
 } = require("../utils/tokens.util");
 const { userValidationSchema } = require("../validations/user");
+
+const logErrorToService = async (req, res) => {
+  const { info, platform, user, error } = req.body;
+  const payload = {
+    info: JSON.stringify(error),
+    platform,
+    user,
+    error: JSON.stringify(error),
+  };
+  if (!user) delete payload.user;
+  if (!user && !info && !error) createError("not enough data provided", 400);
+  // TODO validation
+  const newError = new Error(payload);
+  const savedError = await newError.save();
+  res.json({ created: savedError });
+};
 
 const login = async (req, res) => {
   const { password, phone } = req.body;
@@ -79,4 +96,5 @@ module.exports = {
   register,
   getToken,
   loginWithToken,
+  logErrorToService,
 };

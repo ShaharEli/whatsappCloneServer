@@ -245,3 +245,189 @@
 2021-07-12 10:42:11:4211 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
 2021-07-13 18:54:40:5440 [31merror[39m: [31mUser is not defined[39m
 2021-07-13 18:55:42:5542 [31merror[39m: [31mCast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"[39m
+2021-07-13 19:31:40:3140 [31merror[39m: [31mError validation failed: error: Cast to string failed for value "{[39m
+[31m  componentStack: '\n' +[39m
+[31m    '    in Chat (at SceneView.tsx:122)\n' +[39m
+[31m    '    in StaticContainer\n' +[39m
+[31m    '    in EnsureSingleNavigator (at SceneView.tsx:114)\n' +[39m
+[31m    '    in SceneView (at useDescriptors.tsx:153)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at CardContainer.tsx:245)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at CardContainer.tsx:244)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at CardSheet.tsx:33)\n' +[39m
+[31m    '    in CardSheet (at Card.tsx:573)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at createAnimatedComponent.js:217)\n' +[39m
+[31m    '    in AnimatedComponent (at createAnimatedComponent.js:278)\n' +[39m
+[31m    '    in AnimatedComponentWrapper (at Card.tsx:555)\n' +[39m
+[31m    '    in PanGestureHandler (at GestureHandlerNative.tsx:13)\n' +[39m
+[31m    '    in PanGestureHandler (at Card.tsx:549)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at createAnimatedComponent.js:217)\n' +[39m
+[31m    '    in AnimatedComponent (at createAnimatedComponent.js:278)\n' +[39m
+[31m    '    in AnimatedComponentWrapper (at Card.tsx:544)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at Card.tsx:538)\n' +[39m
+[31m    '    in Card (at CardContainer.tsx:206)\n' +[39m
+[31m    '    in CardContainer (at CardStack.tsx:623)\n' +[39m
+[31m    '    in RNSScreen (at createAnimatedComponent.js:217)\n' +[39m
+[31m    '    in AnimatedComponent (at createAnimatedComponent.js:278)\n' +[39m
+[31m    '    in AnimatedComponentWrapper (at src/index.native.tsx:147)\n' +[39m
+[31m    '    in Screen (at Screens.tsx:74)\n' +[39m
+[31m    '    in MaybeScreen (at CardStack.tsx:616)\n' +[39m
+[31m    '    in RNSScreenContainer (at src/index.native.tsx:186)\n' +[39m
+[31m    '    in ScreenContainer (at Screens.tsx:50)\n' +[39m
+[31m    '    in MaybeScreenContainer (at CardStack.tsx:498)\n' +[39m
+[31m    '    in CardStack (at StackView.tsx:462)\n' +[39m
+[31m    '    in KeyboardManager (at StackView.tsx:458)\n' +[39m
+[31m    '    in RNCSafeAreaProvider (at SafeAreaContext.tsx:76)\n' +[39m
+[31m    '    in SafeAreaProvider (at SafeAreaProviderCompat.tsx:42)\n' +[39m
+[31m    '    in SafeAreaProviderCompat (at StackView.tsx:455)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at StackView.tsx:454)\n' +[39m
+[31m    '    in StackView (at createStackNavigator.tsx:87)\n' +[39m
+[31m    '    in StackNavigator (at PrivateRoutes.js:90)\n' +[39m
+[31m    '    in PrivateRoutes (at routes/index.js:15)\n' +[39m
+[31m    '    in DataProvider (at routes/index.js:14)\n' +[39m
+[31m    '    in EnsureSingleNavigator (at BaseNavigationContainer.tsx:409)\n' +[39m
+[31m    '    in BaseNavigationContainer (at NavigationContainer.tsx:91)\n' +[39m
+[31m    '    in ThemeProvider (at NavigationContainer.tsx:90)\n' +[39m
+[31m    '    in NavigationContainer (at routes/index.js:12)\n' +[39m
+[31m    '    in Routes (at App.js:18)\n' +[39m
+[31m    '    in ErrorBoundary (at App.js:17)\n' +[39m
+[31m    '    in StyleProvider (at App.js:16)\n' +[39m
+[31m    '    in AuthProvider (at App.js:15)\n' +[39m
+[31m    '    in App (at renderApplication.js:47)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at AppContainer.js:107)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at AppContainer.js:134)\n' +[39m
+[31m    '    in AppContainer (at renderApplication.js:40)',[39m
+[31m  isComponentError: true[39m
+[31m}" (type Object) at path "error"[39m
+2021-07-13 19:32:41:3241 [31merror[39m: [31mError validation failed: error: Cast to string failed for value "{[39m
+[31m  componentStack: '\n' +[39m
+[31m    '    in Chat (at SceneView.tsx:122)\n' +[39m
+[31m    '    in StaticContainer\n' +[39m
+[31m    '    in EnsureSingleNavigator (at SceneView.tsx:114)\n' +[39m
+[31m    '    in SceneView (at useDescriptors.tsx:153)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at CardContainer.tsx:245)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at CardContainer.tsx:244)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at CardSheet.tsx:33)\n' +[39m
+[31m    '    in CardSheet (at Card.tsx:573)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at createAnimatedComponent.js:217)\n' +[39m
+[31m    '    in AnimatedComponent (at createAnimatedComponent.js:278)\n' +[39m
+[31m    '    in AnimatedComponentWrapper (at Card.tsx:555)\n' +[39m
+[31m    '    in PanGestureHandler (at GestureHandlerNative.tsx:13)\n' +[39m
+[31m    '    in PanGestureHandler (at Card.tsx:549)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at createAnimatedComponent.js:217)\n' +[39m
+[31m    '    in AnimatedComponent (at createAnimatedComponent.js:278)\n' +[39m
+[31m    '    in AnimatedComponentWrapper (at Card.tsx:544)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at Card.tsx:538)\n' +[39m
+[31m    '    in Card (at CardContainer.tsx:206)\n' +[39m
+[31m    '    in CardContainer (at CardStack.tsx:623)\n' +[39m
+[31m    '    in RNSScreen (at createAnimatedComponent.js:217)\n' +[39m
+[31m    '    in AnimatedComponent (at createAnimatedComponent.js:278)\n' +[39m
+[31m    '    in AnimatedComponentWrapper (at src/index.native.tsx:147)\n' +[39m
+[31m    '    in Screen (at Screens.tsx:74)\n' +[39m
+[31m    '    in MaybeScreen (at CardStack.tsx:616)\n' +[39m
+[31m    '    in RNSScreenContainer (at src/index.native.tsx:186)\n' +[39m
+[31m    '    in ScreenContainer (at Screens.tsx:50)\n' +[39m
+[31m    '    in MaybeScreenContainer (at CardStack.tsx:498)\n' +[39m
+[31m    '    in CardStack (at StackView.tsx:462)\n' +[39m
+[31m    '    in KeyboardManager (at StackView.tsx:458)\n' +[39m
+[31m    '    in RNCSafeAreaProvider (at SafeAreaContext.tsx:76)\n' +[39m
+[31m    '    in SafeAreaProvider (at SafeAreaProviderCompat.tsx:42)\n' +[39m
+[31m    '    in SafeAreaProviderCompat (at StackView.tsx:455)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at StackView.tsx:454)\n' +[39m
+[31m    '    in StackView (at createStackNavigator.tsx:87)\n' +[39m
+[31m    '    in StackNavigator (at PrivateRoutes.js:90)\n' +[39m
+[31m    '    in PrivateRoutes (at routes/index.js:15)\n' +[39m
+[31m    '    in DataProvider (at routes/index.js:14)\n' +[39m
+[31m    '    in EnsureSingleNavigator (at BaseNavigationContainer.tsx:409)\n' +[39m
+[31m    '    in BaseNavigationContainer (at NavigationContainer.tsx:91)\n' +[39m
+[31m    '    in ThemeProvider (at NavigationContainer.tsx:90)\n' +[39m
+[31m    '    in NavigationContainer (at routes/index.js:12)\n' +[39m
+[31m    '    in Routes (at App.js:18)\n' +[39m
+[31m    '    in ErrorBoundary (created by App)\n' +[39m
+[31m    '    in StyleProvider (at App.js:15)\n' +[39m
+[31m    '    in AuthProvider (at App.js:14)\n' +[39m
+[31m    '    in App (at renderApplication.js:47)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at AppContainer.js:107)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at AppContainer.js:134)\n' +[39m
+[31m    '    in AppContainer (at renderApplication.js:40)',[39m
+[31m  isComponentError: true[39m
+[31m}" (type Object) at path "error"[39m
+2021-07-13 19:33:28:3328 [31merror[39m: [31mError validation failed: error: Cast to string failed for value "{[39m
+[31m  componentStack: '\n' +[39m
+[31m    '    in Chat (at SceneView.tsx:122)\n' +[39m
+[31m    '    in StaticContainer\n' +[39m
+[31m    '    in EnsureSingleNavigator (at SceneView.tsx:114)\n' +[39m
+[31m    '    in SceneView (at useDescriptors.tsx:153)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at CardContainer.tsx:245)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at CardContainer.tsx:244)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at CardSheet.tsx:33)\n' +[39m
+[31m    '    in CardSheet (at Card.tsx:573)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at createAnimatedComponent.js:217)\n' +[39m
+[31m    '    in AnimatedComponent (at createAnimatedComponent.js:278)\n' +[39m
+[31m    '    in AnimatedComponentWrapper (at Card.tsx:555)\n' +[39m
+[31m    '    in PanGestureHandler (at GestureHandlerNative.tsx:13)\n' +[39m
+[31m    '    in PanGestureHandler (at Card.tsx:549)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at createAnimatedComponent.js:217)\n' +[39m
+[31m    '    in AnimatedComponent (at createAnimatedComponent.js:278)\n' +[39m
+[31m    '    in AnimatedComponentWrapper (at Card.tsx:544)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at Card.tsx:538)\n' +[39m
+[31m    '    in Card (at CardContainer.tsx:206)\n' +[39m
+[31m    '    in CardContainer (at CardStack.tsx:623)\n' +[39m
+[31m    '    in RNSScreen (at createAnimatedComponent.js:217)\n' +[39m
+[31m    '    in AnimatedComponent (at createAnimatedComponent.js:278)\n' +[39m
+[31m    '    in AnimatedComponentWrapper (at src/index.native.tsx:147)\n' +[39m
+[31m    '    in Screen (at Screens.tsx:74)\n' +[39m
+[31m    '    in MaybeScreen (at CardStack.tsx:616)\n' +[39m
+[31m    '    in RNSScreenContainer (at src/index.native.tsx:186)\n' +[39m
+[31m    '    in ScreenContainer (at Screens.tsx:50)\n' +[39m
+[31m    '    in MaybeScreenContainer (at CardStack.tsx:498)\n' +[39m
+[31m    '    in CardStack (at StackView.tsx:462)\n' +[39m
+[31m    '    in KeyboardManager (at StackView.tsx:458)\n' +[39m
+[31m    '    in RNCSafeAreaProvider (at SafeAreaContext.tsx:76)\n' +[39m
+[31m    '    in SafeAreaProvider (at SafeAreaProviderCompat.tsx:42)\n' +[39m
+[31m    '    in SafeAreaProviderCompat (at StackView.tsx:455)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at StackView.tsx:454)\n' +[39m
+[31m    '    in StackView (at createStackNavigator.tsx:87)\n' +[39m
+[31m    '    in StackNavigator (at PrivateRoutes.js:90)\n' +[39m
+[31m    '    in PrivateRoutes (at routes/index.js:15)\n' +[39m
+[31m    '    in DataProvider (at routes/index.js:14)\n' +[39m
+[31m    '    in EnsureSingleNavigator (at BaseNavigationContainer.tsx:409)\n' +[39m
+[31m    '    in BaseNavigationContainer (at NavigationContainer.tsx:91)\n' +[39m
+[31m    '    in ThemeProvider (at NavigationContainer.tsx:90)\n' +[39m
+[31m    '    in NavigationContainer (at routes/index.js:12)\n' +[39m
+[31m    '    in Routes (at App.js:18)\n' +[39m
+[31m    '    in ErrorBoundary (created by App)\n' +[39m
+[31m    '    in StyleProvider (at App.js:16)\n' +[39m
+[31m    '    in AuthProvider (at App.js:15)\n' +[39m
+[31m    '    in App (at renderApplication.js:47)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at AppContainer.js:107)\n' +[39m
+[31m    '    in RCTView (at View.js:34)\n' +[39m
+[31m    '    in View (at AppContainer.js:134)\n' +[39m
+[31m    '    in AppContainer (at renderApplication.js:40)',[39m
+[31m  isComponentError: true[39m
+[31m}" (type Object) at path "error"[39m
