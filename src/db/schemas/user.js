@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const userDbSchema = new mongoose.Schema(
   {
-    firstName: { type: String, required: true },
-    lastName: { type: String, required: true },
+    firstName: { type: String, required: true, trim: true },
+    lastName: { type: String, required: true, trim: true },
     isActive: { type: Boolean, default: false },
     lastConnected: { type: Date, default: new Date() },
     socketId: { type: String },
@@ -13,6 +13,7 @@ const userDbSchema = new mongoose.Schema(
     password: { type: String, required: true },
     role: { type: String, default: "user", enum: ["admin", "user"] },
     status: { type: String, default: "" },
+    lastConnectedAvailable: { type: Boolean, default: true },
   },
   { timestamps: true }
 );

@@ -6,6 +6,7 @@ const {
   createChat,
   createMsg,
   getMessages,
+  getUserActiveState,
 } = require("../../controllers/chat");
 
 require("dotenv").config();
@@ -19,6 +20,9 @@ chatRouter.get("/messages/:chatId", (req, res) =>
 chatRouter.post("/new", (req, res) => withTryCatch(req, res, createChat));
 chatRouter.post("/new-message", (req, res) =>
   withTryCatch(req, res, createMsg)
+);
+chatRouter.get("/get-user-active-state/:userId", (req, res) =>
+  withTryCatch(req, res, getUserActiveState)
 );
 chatRouter.get("/all-chats", (req, res) => withTryCatch(req, res, getAllChats));
 

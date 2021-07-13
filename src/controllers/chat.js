@@ -1,6 +1,8 @@
 const Chat = require("../db/schemas/chat");
 const Message = require("../db/schemas/message");
+const User = require("../db/schemas/user");
 const createError = require("../utils/createError.util");
+const { getSocketsList } = require("../utils/socket.util");
 
 const getChat = async (req, res) => {
   const { id, type } = req.query;
@@ -11,16 +13,19 @@ const getAllChats = async (req, res) => {
   const { userId } = req;
   const chats = await Chat.find({
     participants: { $elemMatch: { $eq: userId } },
-  }).populate("lastMessage");
+  })
+    .populate("lastMessage")
+    .sort({
+      createdAt: -1,
+    });
   const populatedArr = [];
-
   for (let chat of chats) {
     if (chat.type === "private") {
       populatedArr.push(
         chat
           .populate({
             path: "participants",
-            select: "avatar _id firstName lastName",
+            select: "avatar _id firstName lastName  isActive lastConnected",
           })
           .execPopulate()
       );
@@ -29,6 +34,15 @@ const getAllChats = async (req, res) => {
     }
   }
   res.json({ chats: await Promise.all(populatedArr) });
+};
+
+const getUserActiveState = async (req, res) => {
+  const { userId } = req.params;
+  if (!userId) createError("userId missing", 400);
+  const user = await User.findById(userId);
+  if (!user) createError("user not found", 400);
+  const { isActive, lastConnected } = user;
+  res.json({ isActive, lastConnected });
 };
 
 const createGroupChat = async (req, res, participants, type, userId) => {}; //TODO implement
@@ -84,7 +98,7 @@ const createMsg = async (req, res) => {
     type,
     chatId,
     seenBy: [req.user],
-    by: req.user,
+    by: req.userId,
     media,
     content: message,
   };
@@ -100,7 +114,19 @@ const createMsg = async (req, res) => {
   const chat = await Chat.findByIdAndUpdate(chatId, {
     lastMessage: newMessage._id,
   });
-  io.to(chatId).emit("newMessage", { newMessage, chat });
+  const selectedFieldsToPopulate =
+    chat.participants.length < 3
+      ? "socketId _id firstName lastName avatar isActive lastConnected"
+      : "socketId _id";
+  await chat
+    .populate({ path: "participants", select: selectedFieldsToPopulate })
+    .execPopulate();
+
+  console.log(selectedFieldsToPopulate);
+  io.to(getSocketsList(chat)).emit("newMessage", {
+    message: newMessage,
+    chat,
+  });
   res.json({ newMessage, chat });
 };
 
@@ -110,4 +136,5 @@ module.exports = {
   createChat,
   createMsg,
   getMessages,
+  getUserActiveState,
 };

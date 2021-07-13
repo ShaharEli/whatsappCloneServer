@@ -20,27 +20,33 @@ const socketHandler = (io) => {
         { _id: socket.userId },
         { isActive: true, socketId: socket.id }
       );
+      io.emit("socketConnected", { user: socket.userId });
     } catch ({ message }) {
       Logger.error(message);
     }
 
     socket.on("disconnect", async () => {
       try {
+        const lastConnected = new Date();
         await User.findOneAndUpdate(
           { _id: socket.userId },
-          { isActive: false, lastConnected: new Date() }
+          { isActive: false, lastConnected }
         );
+        io.emit("socketDisconnected", {
+          user: socket.userId,
+          lastConnected,
+        });
       } catch ({ message }) {
         Logger.error(message);
       }
     });
 
-    socket.on("leftChat", async ({ chatId = null }) => {
+    socket.on("leftChat", async ({ chatId }) => {
       if (!chatId) return; //TODO error response
       socket.leave(chatId);
     });
 
-    socket.on("joinedChat", async ({ chatId = null }) => {
+    socket.on("joinedChat", async ({ chatId }) => {
       if (!chatId) return; //TODO error response
       socket.join(chatId);
     });

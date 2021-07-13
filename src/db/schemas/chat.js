@@ -12,8 +12,8 @@ const chatDbSchema = new mongoose.Schema(
     lastMessage: { ref: "Message", type: mongoose.Schema.Types.ObjectId },
     participants: { ref: "User", type: [mongoose.Schema.Types.ObjectId] },
     deletedAt: { type: Date },
-    name: { type: String },
-    description: { type: String },
+    name: { type: String, trim: true },
+    description: { type: String, trim: true },
     image: { type: String },
   },
   { timestamps: true }
