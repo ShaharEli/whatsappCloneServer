@@ -431,3 +431,5 @@
 [31m    '    in AppContainer (at renderApplication.js:40)',[39m
 [31m  isComponentError: true[39m
 [31m}" (type Object) at path "error"[39m
+2021-07-14 16:26:43:2643 [31merror[39m: [31mgetaddrinfo ENOTFOUND cluster0-shard-00-02.6oskm.mongodb.net[39m
+2021-07-14 16:26:43:2643 [31merror[39m: [31mgetaddrinfo ENOTFOUND cluster0-shard-00-02.6oskm.mongodb.net[39m

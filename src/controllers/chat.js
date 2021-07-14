@@ -20,18 +20,17 @@ const getAllChats = async (req, res) => {
     });
   const populatedArr = [];
   for (let chat of chats) {
-    if (chat.type === "private") {
-      populatedArr.push(
-        chat
-          .populate({
-            path: "participants",
-            select: "avatar _id firstName lastName  isActive lastConnected",
-          })
-          .execPopulate()
-      );
-    } else {
-      populatedArr.push(chat);
-    }
+    populatedArr.push(
+      chat
+        .populate({
+          path: "participants",
+          select:
+            chat.type === "private"
+              ? "avatar _id firstName lastName isActive lastConnected socketId"
+              : "socketId",
+        })
+        .execPopulate()
+    );
   }
   res.json({ chats: await Promise.all(populatedArr) });
 };
@@ -122,7 +121,6 @@ const createMsg = async (req, res) => {
     .populate({ path: "participants", select: selectedFieldsToPopulate })
     .execPopulate();
 
-  console.log(selectedFieldsToPopulate);
   io.to(getSocketsList(chat)).emit("newMessage", {
     message: newMessage,
     chat,

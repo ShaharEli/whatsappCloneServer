@@ -12,7 +12,11 @@ const messageDbSchema = new mongoose.Schema(
       default: "text",
       enum: ["text", "voice", "video", "image"],
     },
-    seenBy: { ref: "User", type: [mongoose.Schema.Types.ObjectId] },
+    seenBy: {
+      ref: "User",
+      type: [mongoose.Schema.Types.ObjectId],
+      default: [],
+    },
     chatId: {
       ref: "Chat",
       type: mongoose.Schema.Types.ObjectId,

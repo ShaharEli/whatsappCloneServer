@@ -1,4 +1,5 @@
 const Chat = require("../db/schemas/chat");
+const Message = require("../db/schemas/message");
 const User = require("../db/schemas/user");
 const Logger = require("../logger/logger");
 const { getSocketsList } = require("../utils/socket.util");
@@ -46,9 +47,15 @@ const socketHandler = (io) => {
       socket.leave(chatId);
     });
 
-    socket.on("joinedChat", async ({ chatId }) => {
+    socket.on("joinedChat", async ({ chatId, participants }) => {
       if (!chatId) return; //TODO error response
       socket.join(chatId);
+      await seen(chatId, io, socket, participants);
+    });
+
+    socket.on("seen", async ({ chatId, participants }) => {
+      if (!chatId) return; //TODO error response
+      await seen(chatId, io, socket, participants);
     });
 
     socket.on("type", async ({ chatId, typing: isTyping }) => {
@@ -63,6 +70,19 @@ const socketHandler = (io) => {
       );
     });
   });
+};
+
+const seen = async (chatId, io, socket, participants) => {
+  try {
+    await Message.updateMany(
+      { chatId },
+      { $addToSet: { seenBy: socket.userId } }
+    );
+    console.log(participants);
+    socket.to(participants).emit("seen", { userId: socket.userId, chatId });
+  } catch (e) {
+    console.log("err", e);
+  }
 };
 
 module.exports = socketHandler;
