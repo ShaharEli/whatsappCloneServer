@@ -18,7 +18,8 @@ const getAllChats = async (req, res) => {
     .sort({
       createdAt: -1,
     });
-  const populatedArr = [];
+  let populatedArr = [];
+  let unreadMessages = [];
   for (let chat of chats) {
     populatedArr.push(
       chat
@@ -31,8 +32,19 @@ const getAllChats = async (req, res) => {
         })
         .execPopulate()
     );
+    unreadMessages.push(
+      Message.countDocuments({
+        chatId: chat._id,
+        seenBy: { $nin: [userId] },
+      }).exec()
+    );
   }
-  res.json({ chats: await Promise.all(populatedArr) });
+  populatedArr = await Promise.all(populatedArr);
+  unreadMessages = await Promise.all(unreadMessages);
+  res.json({
+    chats: populatedArr,
+    unreadMessages,
+  });
 };
 
 const getUserActiveState = async (req, res) => {

@@ -433,3 +433,45 @@
 [31m}" (type Object) at path "error"[39m
 2021-07-14 16:26:43:2643 [31merror[39m: [31mgetaddrinfo ENOTFOUND cluster0-shard-00-02.6oskm.mongodb.net[39m
 2021-07-14 16:26:43:2643 [31merror[39m: [31mgetaddrinfo ENOTFOUND cluster0-shard-00-02.6oskm.mongodb.net[39m
+2021-07-15 01:22:30:2230 [31merror[39m: [31mCast to Array failed for value "{ seenBy: { '$nin': '60e5881af4b2fa4016bf76d5' } }" (type Object) at path "$and" for model "Message"[39m
+2021-07-15 01:22:32:2232 [31merror[39m: [31mCast to Array failed for value "{ seenBy: { '$nin': '60ebf5206d150e338a00e56d' } }" (type Object) at path "$and" for model "Message"[39m
+2021-07-15 01:25:13:2513 [31merror[39m: [31mCast to Array failed for value "{ seenBy: { '$elemMatch': '60e5881af4b2fa4016bf76d5' } }" (type Object) at path "$and" for model "Message"[39m
+2021-07-15 01:25:15:2515 [31merror[39m: [31mCast to Array failed for value "{ seenBy: { '$elemMatch': '60ebf5206d150e338a00e56d' } }" (type Object) at path "$and" for model "Message"[39m
+2021-07-15 01:27:17:2717 [31merror[39m: [31mCast to Array failed for value "{ seenBy: { '$in': [ '60e5881af4b2fa4016bf76d5' ] } }" (type Object) at path "$and" for model "Message"[39m
+2021-07-15 01:27:19:2719 [31merror[39m: [31mCast to Array failed for value "{ seenBy: { '$in': [ '60ebf5206d150e338a00e56d' ] } }" (type Object) at path "$and" for model "Message"[39m
+2021-07-15 01:31:16:3116 [31merror[39m: [31mConverting circular structure to JSON[39m
+[31m    --> starting at object with constructor 'NativeTopology'[39m
+[31m    |     property 's' -> object with constructor 'Object'[39m
+[31m    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'[39m
+[31m    --- property 'topology' closes the circle[39m
+2021-07-15 01:31:18:3118 [31merror[39m: [31mConverting circular structure to JSON[39m
+[31m    --> starting at object with constructor 'NativeTopology'[39m
+[31m    |     property 's' -> object with constructor 'Object'[39m
+[31m    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'[39m
+[31m    --- property 'topology' closes the circle[39m
+2021-07-15 01:34:00:340 [31merror[39m: [31mPromise.all(...).map is not a function[39m
+2021-07-15 01:34:01:341 [31merror[39m: [31mPromise.all(...).map is not a function[39m
+2021-07-15 01:34:14:3414 [31merror[39m: [31mConverting circular structure to JSON[39m
+[31m    --> starting at object with constructor 'NativeTopology'[39m
+[31m    |     property 's' -> object with constructor 'Object'[39m
+[31m    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'[39m
+[31m    --- property 'topology' closes the circle[39m
+2021-07-15 01:34:15:3415 [31merror[39m: [31mConverting circular structure to JSON[39m
+[31m    --> starting at object with constructor 'NativeTopology'[39m
+[31m    |     property 's' -> object with constructor 'Object'[39m
+[31m    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'[39m
+[31m    --- property 'topology' closes the circle[39m
+2021-07-15 01:34:58:3458 [31merror[39m: [31mc.toJson is not a function[39m
+2021-07-15 01:35:00:350 [31merror[39m: [31mc.toJson is not a function[39m
+2021-07-15 01:35:11:3511 [31merror[39m: [31mc.toJSON is not a function[39m
+2021-07-15 01:35:13:3513 [31merror[39m: [31mc.toJSON is not a function[39m
+2021-07-15 01:38:29:3829 [31merror[39m: [31mConverting circular structure to JSON[39m
+[31m    --> starting at object with constructor 'NativeTopology'[39m
+[31m    |     property 's' -> object with constructor 'Object'[39m
+[31m    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'[39m
+[31m    --- property 'topology' closes the circle[39m
+2021-07-15 01:38:30:3830 [31merror[39m: [31mConverting circular structure to JSON[39m
+[31m    --> starting at object with constructor 'NativeTopology'[39m
+[31m    |     property 's' -> object with constructor 'Object'[39m
+[31m    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'[39m
+[31m    --- property 'topology' closes the circle[39m
