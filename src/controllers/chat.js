@@ -15,7 +15,13 @@ const getAllChats = async (req, res) => {
   const chats = await Chat.find({
     participants: { $elemMatch: { $eq: userId } },
   })
-    .populate("lastMessage")
+    .populate({
+      path: "lastMessage",
+      populate: {
+        path: "by",
+        select: "_id firstName lastName",
+      },
+    })
     .sort({
       createdAt: -1,
     });
