@@ -18,7 +18,17 @@ const sendMessage = (to, data, notification = {}) =>
       priority: "high",
     }
   );
+
+const getTokensList = (chat, userId) =>
+  chat.participants
+    .filter(
+      (participant) =>
+        !!participant.firebaseToken && (!userId || participant?._id != userId)
+    )
+    .map(({ firebaseToken }) => firebaseToken);
+
 module.exports = {
   admin,
   sendMessage,
+  getTokensList,
 };

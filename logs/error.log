@@ -502,3 +502,35 @@
 2021-07-18 18:45:52:4552 [31merror[39m: [31mMessage.find(...).sort(...).populate(...).execPopulate is not a function[39m
 2021-07-18 18:46:11:4611 [31merror[39m: [31mMessage.find(...).populate(...).sort(...).execPopulate is not a function[39m
 2021-07-18 22:29:50:2950 [31merror[39m: [31mRegistration token(s) provided to sendToDevice() must be a non-empty string or a non-empty array.[39m
+2021-07-18 23:09:38:938 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-18 23:10:08:108 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-18 23:10:08:108 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-18 23:10:09:109 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-18 23:10:09:109 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-18 23:10:09:109 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-18 23:10:56:1056 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-18 23:12:07:127 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-18 23:12:08:128 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-18 23:12:08:128 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-18 23:51:03:513 [31merror[39m: [31mCould not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/[39m
+2021-07-18 23:52:17:5217 [31merror[39m: [31mconnection 8 to 18.158.181.27:27017 closed[39m
+2021-07-19 00:14:30:1430 [31merror[39m: [31mCannot read property 'find' of undefined[39m
+2021-07-19 00:15:01:151 [31merror[39m: [31mCannot read property 'firstName' of undefined[39m
+2021-07-19 00:15:50:1550 [31merror[39m: [31mCannot read property 'firstName' of undefined[39m
+2021-07-19 00:15:51:1551 [31merror[39m: [31mCannot read property 'firstName' of undefined[39m
+2021-07-19 00:16:34:1634 [31merror[39m: [31mCannot read property 'firstName' of undefined[39m
+2021-07-19 00:17:17:1717 [31merror[39m: [31mCannot read property 'firstName' of undefined[39m
+2021-07-19 00:17:44:1744 [31merror[39m: [31mgetTokensList is not defined[39m
+2021-07-19 00:18:54:1854 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.message" property. Values must be strings.[39m
+2021-07-19 00:18:56:1856 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.message" property. Values must be strings.[39m
+2021-07-19 00:18:57:1857 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.message" property. Values must be strings.[39m
+2021-07-19 00:19:38:1938 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.message" property. Values must be strings.[39m
+2021-07-19 00:19:50:1950 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.newMessage" property. Values must be strings.[39m
+2021-07-19 01:18:57:1857 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.chatId" property. Values must be strings.[39m
+2021-07-19 01:19:06:196 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.chatId" property. Values must be strings.[39m
+2021-07-19 01:30:22:3022 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.chatId" property. Values must be strings.[39m
+2021-07-19 01:30:30:3030 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.chatId" property. Values must be strings.[39m
+2021-07-19 01:31:13:3113 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.chatId" property. Values must be strings.[39m
+2021-07-19 01:31:18:3118 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.chatId" property. Values must be strings.[39m
+2021-07-19 01:32:07:327 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.chatId" property. Values must be strings.[39m
+2021-07-19 01:32:37:3237 [31merror[39m: [31mMessaging payload contains an invalid value for the "data.chatId" property. Values must be strings.[39m

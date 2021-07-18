@@ -2,12 +2,23 @@ const Chat = require("../db/schemas/chat");
 const Message = require("../db/schemas/message");
 const User = require("../db/schemas/user");
 const createError = require("../utils/createError.util");
+const { sendMessage, getTokensList } = require("../utils/firebase.util");
 const { getSocketsList } = require("../utils/socket.util");
 const { userValidationSchema } = require("../validations/user");
 
 const getChat = async (req, res) => {
-  const { id, type } = req.query;
-  if (!id || !type) createError("Missing data", 400);
+  const { id } = req.params;
+  if (!id) createError("Missing data", 400);
+  const chat = await Chat.findById(id)
+    .populate({ path: "participants", select: "firstName _id lastName avatar" })
+    .populate({
+      path: "lastMessage",
+      populate: {
+        path: "by",
+        select: "_id firstName lastName",
+      },
+    });
+  res.json(chat);
 };
 
 const getAllChats = async (req, res) => {
@@ -166,7 +177,7 @@ const createMsg = async (req, res) => {
   const payload = {
     type,
     chatId,
-    seenBy: [req.user],
+    seenBy: [req.userId],
     by: req.userId,
     media,
     content: message,
@@ -184,17 +195,44 @@ const createMsg = async (req, res) => {
     lastMessage: newMessage._id,
   });
   const selectedFieldsToPopulate =
-    chat.participants.length < 3
-      ? "socketId _id firstName lastName avatar isActive lastConnected"
-      : "socketId _id";
+    chat.type === "private"
+      ? "socketId _id firstName lastName avatar isActive lastConnected firebaseToken"
+      : "socketId _id firebaseToken firstName lastName";
   await chat
     .populate({ path: "participants", select: selectedFieldsToPopulate })
     .execPopulate();
+
+  if (chat.type === "group") {
+    await newMessage
+      .populate({ path: "by", select: "_id firstName lastName" })
+      .execPopulate();
+  }
 
   io.to(getSocketsList(chat)).emit("newMessage", {
     message: newMessage,
     chat,
   });
+  const sender = chat.participants.find(({ _id }) => _id == req.userId);
+  const senderName = `${sender.firstName} ${sender.lastName}`;
+  const title = chat.name ? chat.name : senderName;
+  const body =
+    chat.type === "group"
+      ? `${senderName}: ${newMessage.content}`
+      : newMessage.content;
+
+  await sendMessage(
+    getTokensList(chat, req.userId),
+    {
+      chatId,
+      type: "newMessage",
+      title,
+      body,
+    },
+    {
+      title,
+      body,
+    }
+  );
   res.json({ newMessage, chat });
 };
 
