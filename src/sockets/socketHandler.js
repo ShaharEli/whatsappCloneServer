@@ -4,12 +4,15 @@ const User = require("../db/schemas/user");
 const Logger = require("../logger/logger");
 const { getSocketsList } = require("../utils/socket.util");
 const { verifyAccessToken } = require("../utils/tokens.util");
+const { sendMessage } = require("../utils/firebase.util");
 const socketHandler = (io) => {
   io.use(async (socket, next) => {
     const isAuthenticated = verifyAccessToken(socket.handshake.auth?.token);
     const userId = isAuthenticated.userId?.userId;
     if (isAuthenticated && userId) {
+      const { firebaseToken } = socket.handshake.auth;
       socket["userId"] = userId;
+      socket["firebaseToken"] = firebaseToken;
       return next();
     }
     next(new Error("not authorized"));
@@ -19,8 +22,24 @@ const socketHandler = (io) => {
     try {
       await User.findOneAndUpdate(
         { _id: socket.userId },
-        { isActive: true, socketId: socket.id }
+        {
+          isActive: true,
+          socketId: socket.id,
+          firebaseToken: socket.firebaseToken,
+        }
       );
+      if (socket?.firebaseToken)
+        setTimeout(() => {
+          sendMessage(
+            socket?.firebaseToken,
+            { title: "hio" },
+            {
+              body: "This week's edition is now available.",
+              title: "NewsMagazine.com",
+            }
+          );
+        }, 2000);
+
       io.emit("socketConnected", { user: socket.userId });
     } catch ({ message }) {
       Logger.error(message);

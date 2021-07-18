@@ -501,3 +501,4 @@
 2021-07-18 18:44:55:4455 [31merror[39m: [31mMessage.find(...).sort(...).populate(...).execPopulate is not a function[39m
 2021-07-18 18:45:52:4552 [31merror[39m: [31mMessage.find(...).sort(...).populate(...).execPopulate is not a function[39m
 2021-07-18 18:46:11:4611 [31merror[39m: [31mMessage.find(...).populate(...).sort(...).execPopulate is not a function[39m
+2021-07-18 22:29:50:2950 [31merror[39m: [31mRegistration token(s) provided to sendToDevice() must be a non-empty string or a non-empty array.[39m

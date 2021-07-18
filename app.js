@@ -6,6 +6,7 @@ const loggerMiddleWare = require("./src/logger/morgan");
 const http = require("http");
 const socketIo = require("socket.io");
 const socketHandler = require("./src/sockets/socketHandler");
+const { admin } = require("./src/utils/firebase.util");
 connectToDb();
 const app = express();
 const server = http.createServer(app);

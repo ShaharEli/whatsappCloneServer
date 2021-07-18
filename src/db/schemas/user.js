@@ -14,6 +14,7 @@ const userDbSchema = new mongoose.Schema(
     role: { type: String, default: "user", enum: ["admin", "user"] },
     status: { type: String, default: "" },
     lastConnectedAvailable: { type: Boolean, default: true },
+    firebaseToken: { type: String },
   },
   { timestamps: true }
 );
