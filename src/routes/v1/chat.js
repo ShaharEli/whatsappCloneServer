@@ -14,9 +14,7 @@ require("dotenv").config();
 const chatRouter = Router();
 
 chatRouter.get("/chat", (req, res) => withTryCatch(req, res, getChat));
-chatRouter.get("/messages/:chatId", (req, res) =>
-  withTryCatch(req, res, getMessages)
-);
+chatRouter.get("/messages", (req, res) => withTryCatch(req, res, getMessages));
 chatRouter.post("/new", (req, res) => withTryCatch(req, res, createChat));
 chatRouter.post("/new-message", (req, res) =>
   withTryCatch(req, res, createMsg)

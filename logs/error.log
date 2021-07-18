@@ -475,3 +475,29 @@
 [31m    |     property 's' -> object with constructor 'Object'[39m
 [31m    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'[39m
 [31m    --- property 'topology' closes the circle[39m
+2021-07-16 17:21:01:211 [31merror[39m: [31mconnection 4 to 18.158.181.27:27017 closed[39m
+2021-07-16 20:08:03:83 [31merror[39m: [31mconnection 27 to 18.158.181.27:27017 closed[39m
+2021-07-16 20:08:03:83 [31merror[39m: [31mconnection 32 to 18.158.181.27:27017 closed[39m
+2021-07-16 20:08:03:83 [31merror[39m: [31mconnection 23 to 18.158.181.27:27017 closed[39m
+2021-07-16 20:08:03:83 [31merror[39m: [31mconnection 29 to 18.158.181.27:27017 closed[39m
+2021-07-16 20:08:03:83 [31merror[39m: [31mconnection 26 to 18.158.181.27:27017 closed[39m
+2021-07-16 20:08:03:83 [31merror[39m: [31mconnection 24 to 18.158.181.27:27017 closed[39m
+2021-07-16 20:08:03:83 [31merror[39m: [31mconnection 28 to 18.158.181.27:27017 closed[39m
+2021-07-16 20:08:03:83 [31merror[39m: [31mconnection 25 to 18.158.181.27:27017 closed[39m
+2021-07-16 20:08:03:83 [31merror[39m: [31mconnection 30 to 18.158.181.27:27017 closed[39m
+2021-07-16 20:08:03:83 [31merror[39m: [31mconnection 31 to 18.158.181.27:27017 closed[39m
+2021-07-18 17:03:58:358 [31merror[39m: [31mimage is not defined[39m
+2021-07-18 18:27:20:2720 [31merror[39m: [31mmessages.populate is not a function[39m
+2021-07-18 18:31:05:315 [31merror[39m: [31mmessages.populate is not a function[39m
+2021-07-18 18:33:13:3313 [31merror[39m: [31mMessage.find(...).sort(...).populate(...).execPopulate is not a function[39m
+2021-07-18 18:35:29:3529 [31merror[39m: [31mmessages.populate is not a function[39m
+2021-07-18 18:35:46:3546 [31merror[39m: [31mmessages.populate is not a function[39m
+2021-07-18 18:35:54:3554 [31merror[39m: [31mmessages.populate is not a function[39m
+2021-07-18 18:37:14:3714 [31merror[39m: [31mmessages.populate(...).execPopulate is not a function[39m
+2021-07-18 18:38:25:3825 [31merror[39m: [31mmessages.populate is not a function[39m
+2021-07-18 18:40:39:4039 [31merror[39m: [31mmessages.populate is not a function[39m
+2021-07-18 18:43:30:4330 [31merror[39m: [31mMessage.find(...).sort(...).populate(...).execPopulate is not a function[39m
+2021-07-18 18:44:30:4430 [31merror[39m: [31mMessage.find(...).sort(...).populate(...).execPopulate is not a function[39m
+2021-07-18 18:44:55:4455 [31merror[39m: [31mMessage.find(...).sort(...).populate(...).execPopulate is not a function[39m
+2021-07-18 18:45:52:4552 [31merror[39m: [31mMessage.find(...).sort(...).populate(...).execPopulate is not a function[39m
+2021-07-18 18:46:11:4611 [31merror[39m: [31mMessage.find(...).populate(...).sort(...).execPopulate is not a function[39m

@@ -3,6 +3,7 @@ const Message = require("../db/schemas/message");
 const User = require("../db/schemas/user");
 const createError = require("../utils/createError.util");
 const { getSocketsList } = require("../utils/socket.util");
+const { userValidationSchema } = require("../validations/user");
 
 const getChat = async (req, res) => {
   const { id, type } = req.query;
@@ -28,7 +29,7 @@ const getAllChats = async (req, res) => {
           select:
             chat.type === "private"
               ? "avatar _id firstName lastName isActive lastConnected socketId"
-              : "socketId",
+              : "socketId firstName lastName _id",
         })
         .execPopulate()
     );
@@ -56,7 +57,38 @@ const getUserActiveState = async (req, res) => {
   res.json({ isActive, lastConnected });
 };
 
-const createGroupChat = async (req, res, participants, type, userId) => {}; //TODO implement
+const createGroupChat = async (
+  req,
+  res,
+  participants,
+  type,
+  userId,
+  image,
+  name,
+  userFullName
+) => {
+  const payload = {
+    participants: [...participants, userId],
+    mainAdmin: userId,
+    type,
+    name,
+    image,
+    admins: [userId],
+  };
+  if (!image) delete payload.image;
+  const chatToBeSaved = new Chat(payload);
+  const newChat = await chatToBeSaved.save();
+  await newChat
+    .populate({ path: "participants", select: "-password -email -avatar" })
+    .execPopulate();
+  const io = req.app.get("socketio");
+  io.to(getSocketsList(newChat, userId)).emit("newMessage", {
+    message: `${userFullName} added you`, //TODO create real message doc
+    chat: newChat,
+  });
+  res.json({ newChat });
+};
+
 const createBroadcastChat = async (req, res, participants, type, userId) => {}; //TODO implement
 
 const createPrivateChat = async (req, res, participants, type, userId) => {
@@ -72,9 +104,18 @@ const createPrivateChat = async (req, res, participants, type, userId) => {
 };
 
 const createChat = async (req, res) => {
-  const { participants, type } = req.body;
+  const { participants, type, image, name, userFullName } = req.body;
   const { userId } = req;
-  const argsArr = [req, res, participants, type, userId];
+  const argsArr = [
+    req,
+    res,
+    participants,
+    type,
+    userId,
+    image,
+    name,
+    userFullName,
+  ];
   switch (type) {
     case "private":
       createPrivateChat(...argsArr);
@@ -91,11 +132,22 @@ const createChat = async (req, res) => {
 };
 
 const getMessages = async (req, res) => {
-  const { chatId } = req.params;
-  if (!chatId) createError("Error occurred", 400);
-  const messages = await Message.find({ chatId }).sort({
-    createdAt: -1,
-  });
+  let { chatId, isGroup } = req.query;
+  if (!chatId || !isGroup) createError("Error occurred", 400);
+  isGroup = isGroup === "true";
+  let messages;
+  if (isGroup) {
+    messages = await Message.find({ chatId })
+      .populate({ path: "by", select: "firstName _id lastName" })
+      .sort({
+        createdAt: -1,
+      });
+  } else {
+    messages = await Message.find({ chatId }).sort({
+      createdAt: -1,
+    });
+  }
+
   res.json(messages);
 };
 

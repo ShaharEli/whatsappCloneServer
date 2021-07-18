@@ -50,7 +50,6 @@ const socketHandler = (io) => {
     socket.on("joinedChat", async ({ chatId, participants }) => {
       if (!chatId) return; //TODO error response
       socket.join(chatId);
-      console.log("here");
       await seen(chatId, socket, participants);
     });
 
