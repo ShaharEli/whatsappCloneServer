@@ -7,10 +7,11 @@ const messageDbSchema = new mongoose.Schema(
     forwarded: { type: Boolean, default: false },
     forwordsCount: { type: Number, default: 0 },
     content: { type: String, trim: true },
+    media: { type: String },
     type: {
       type: String,
       default: "text",
-      enum: ["text", "voice", "video", "image"],
+      enum: ["text", "voice", "video", "image", "contact"],
     },
     seenBy: {
       ref: "User",
