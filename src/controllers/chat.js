@@ -149,20 +149,40 @@ const createChat = async (req, res) => {
 };
 
 const getMessages = async (req, res) => {
-  let { chatId, isGroup } = req.query;
+  let { chatId, isGroup, limit = 30, from = new Date().valueOf() } = req.query;
   if (!chatId || !isGroup) createError("Error occurred", 400);
+  if (typeof limit !== "number") {
+    try {
+      limit = parseInt(limit);
+    } catch {
+      limit = 30;
+    }
+  }
   isGroup = isGroup === "true";
   let messages;
   if (isGroup) {
-    messages = await Message.find({ chatId })
+    messages = await Message.find({
+      chatId,
+      createdAt: {
+        $lt: from,
+      },
+    })
       .populate({ path: "by", select: "firstName _id lastName" })
       .sort({
         createdAt: -1,
-      });
+      })
+      .limit(limit);
   } else {
-    messages = await Message.find({ chatId }).sort({
-      createdAt: -1,
-    });
+    messages = await Message.find({
+      chatId,
+      createdAt: {
+        $lte: from,
+      },
+    })
+      .sort({
+        createdAt: -1,
+      })
+      .limit(30);
   }
 
   res.json(messages);
