@@ -8,6 +8,11 @@ const messageDbSchema = new mongoose.Schema(
     forwordsCount: { type: Number, default: 0 },
     content: { type: String, trim: true },
     media: { type: String },
+    starredBy: {
+      ref: "User",
+      type: [mongoose.Schema.Types.ObjectId],
+      default: [],
+    },
     type: {
       type: String,
       default: "text",

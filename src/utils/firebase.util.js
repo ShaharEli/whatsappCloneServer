@@ -23,7 +23,9 @@ const getTokensList = (chat, userId) =>
   chat.participants
     .filter(
       (participant) =>
-        !!participant.firebaseToken && (!userId || participant?._id != userId)
+        !!participant.firebaseToken &&
+        (!userId || participant?._id != userId) &&
+        !chat?.usersWithoutNotifications?.find((id) => id == participant?._id)
     )
     .map(({ firebaseToken }) => firebaseToken);
 

@@ -15,6 +15,10 @@ const userDbSchema = new mongoose.Schema(
     status: { type: String, default: "" },
     lastConnectedAvailable: { type: Boolean, default: true },
     firebaseToken: { type: String },
+    blocked: {
+      ref: "User",
+      type: [mongoose.Schema.Types.ObjectId],
+    },
   },
   { timestamps: true }
 );

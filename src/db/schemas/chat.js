@@ -15,6 +15,11 @@ const chatDbSchema = new mongoose.Schema(
     name: { type: String, trim: true },
     description: { type: String, trim: true },
     image: { type: String },
+    usersWithoutNotifications: {
+      ref: "User",
+      type: [mongoose.Schema.Types.ObjectId],
+      default: [],
+    },
   },
   { timestamps: true }
 );

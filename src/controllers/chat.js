@@ -138,6 +138,7 @@ const createChat = async (req, res) => {
       createPrivateChat(...argsArr);
       break;
     case "group":
+      if (!name || !image) createError("Error occurred", 400);
       createGroupChat(...argsArr);
       break;
     case "broadcast":
@@ -256,11 +257,74 @@ const createMsg = async (req, res) => {
   res.json({ newMessage, chat });
 };
 
+const modifyChat = async (req, res) => {
+  const { id } = req.params;
+  const { withNotifications } = req.body;
+  if (!id) createError("Error occurred", 400);
+  const payload = {};
+  if (typeof withNotifications === "boolean") {
+    if (withNotifications) {
+      payload.$pull = {
+        usersWithoutNotifications: { $in: [req.userId] },
+      };
+    } else {
+      payload.$addToSet = {
+        usersWithoutNotifications: req.userId,
+      };
+    }
+  }
+  const chat = await Chat.findByIdAndUpdate(id, payload, { new: true });
+  res.json(chat);
+};
+
+const getStarredMessages = async (req, res) => {
+  const { withMessages = false, chatId } = req.query;
+  if (!chatId) createError("Chat id missing", 400);
+  if (withMessages) {
+    const messages = await Message.find({
+      chatId,
+      starredBy: { $in: req.userId },
+    });
+    res.json({ messages, count: messages.length });
+  } else {
+    const count = await Message.countDocuments({
+      chatId,
+      starredBy: { $in: req.userId },
+    });
+    res.json({ count });
+  }
+};
+const getParticipants = async (req, res) => {
+  const { id } = req.params;
+  if (!id) createError("Chat id missing", 400);
+  const chat = await Chat.findById(id).populate({
+    path: "participants",
+    select: "_id avatar status firstName lastName",
+  });
+  if (!chat) createError("Error occurred", 400);
+  res.json(chat.toJSON().participants);
+};
+
+const getUser = async (req, res) => {
+  const { id } = req.params;
+  if (!id) createError("User id missing", 400);
+  const user = await User.findById(
+    id,
+    "_id firstName lastName status isActive lastConnected avatar"
+  ).lean();
+
+  res.json(user);
+};
+
 module.exports = {
+  getUser,
+  getParticipants,
   getChat,
   getAllChats,
   createChat,
   createMsg,
   getMessages,
   getUserActiveState,
+  modifyChat,
+  getStarredMessages,
 };
