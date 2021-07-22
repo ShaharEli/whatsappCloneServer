@@ -7,6 +7,7 @@ const userValidationSchema = Joi.object({
   phone: Joi.string().required().min(10),
   avatar: Joi.string(),
   password: Joi.string().required().min(6),
+  publicKey: Joi.string().required().min(6),
 });
 
 module.exports = {

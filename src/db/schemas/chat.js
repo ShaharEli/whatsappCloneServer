@@ -12,7 +12,10 @@ const chatDbSchema = new mongoose.Schema(
     lastMessage: { ref: "Message", type: mongoose.Schema.Types.ObjectId },
     participants: { ref: "User", type: [mongoose.Schema.Types.ObjectId] },
     deletedAt: { type: Date },
-    name: { type: String, trim: true },
+    name: {
+      type: String,
+      trim: true,
+    }, //TODO add validation
     description: { type: String, trim: true },
     image: { type: String },
     usersWithoutNotifications: {

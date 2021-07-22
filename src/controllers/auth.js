@@ -44,7 +44,7 @@ const loginWithToken = async (req, res) => {
   if (!refreshToken) createError("token missing", 400);
   const userId = verifyRefreshToken(refreshToken);
   if (!userId) createError("invalid token", 400);
-  const user = await User.findById(userId.userId);
+  const user = await User.findById(userId.userId).lean();
   if (!user) createError("error occurred", 500);
   delete user.password;
   const accessToken = generateAccessToken(userId);
@@ -61,8 +61,17 @@ const register = async (req, res) => {
     avatar = null,
     email,
     password,
+    publicKey,
   } = req.body;
-  const payload = { firstName, lastName, phone, avatar, email, password };
+  const payload = {
+    firstName,
+    lastName,
+    phone,
+    avatar,
+    email,
+    password,
+    publicKey,
+  };
   if (!avatar) delete payload.avatar;
   try {
     await userValidationSchema.validateAsync(payload);

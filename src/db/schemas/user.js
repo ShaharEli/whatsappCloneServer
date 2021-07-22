@@ -15,6 +15,7 @@ const userDbSchema = new mongoose.Schema(
     status: { type: String, default: "" },
     lastConnectedAvailable: { type: Boolean, default: true },
     firebaseToken: { type: String },
+    publicKey:{ type: String, required: true},
     blocked: {
       ref: "User",
       type: [mongoose.Schema.Types.ObjectId],

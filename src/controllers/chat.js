@@ -10,7 +10,10 @@ const getChat = async (req, res) => {
   const { id } = req.params;
   if (!id) createError("Missing data", 400);
   const chat = await Chat.findById(id)
-    .populate({ path: "participants", select: "firstName _id lastName avatar" })
+    .populate({
+      path: "participants",
+      select: "firstName _id lastName avatar publicKey phone",
+    })
     .populate({
       path: "lastMessage",
       populate: {
@@ -45,8 +48,8 @@ const getAllChats = async (req, res) => {
           path: "participants",
           select:
             chat.type === "private"
-              ? "avatar _id firstName lastName isActive lastConnected socketId"
-              : "socketId firstName lastName _id",
+              ? "avatar _id firstName lastName isActive lastConnected socketId publicKey"
+              : "socketId firstName lastName _id phone",
         })
         .execPopulate()
     );
@@ -217,7 +220,7 @@ const createMsg = async (req, res) => {
   });
   const selectedFieldsToPopulate =
     chat.type === "private"
-      ? "socketId _id firstName lastName avatar isActive lastConnected firebaseToken"
+      ? "socketId _id firstName lastName avatar isActive lastConnected firebaseToken publicKey"
       : "socketId _id firebaseToken firstName lastName";
   await chat
     .populate({ path: "participants", select: selectedFieldsToPopulate })
@@ -259,7 +262,13 @@ const createMsg = async (req, res) => {
 
 const modifyChat = async (req, res) => {
   const { id } = req.params;
-  const { withNotifications } = req.body;
+  const {
+    withNotifications,
+    removeParticipant,
+    addParticipants,
+    addAdmin,
+    removeAdmin,
+  } = req.body;
   if (!id) createError("Error occurred", 400);
   const payload = {};
   if (typeof withNotifications === "boolean") {
@@ -273,7 +282,29 @@ const modifyChat = async (req, res) => {
       };
     }
   }
+  if (removeParticipant) {
+    payload.$pull = {
+      participants: { $in: [removeParticipant] },
+      admins: { $in: [removeParticipant] },
+    };
+  }
+  if (addParticipants) {
+    payload.$addToSet = {
+      participants: addParticipants,
+    };
+  }
+  if (addAdmin) {
+    payload.$addToSet = {
+      admins: addAdmin,
+    };
+  }
+  if (removeAdmin) {
+    payload.$pull = {
+      admins: { $in: [removeAdmin] },
+    };
+  }
   const chat = await Chat.findByIdAndUpdate(id, payload, { new: true });
+  // TODO socket updates
   res.json(chat);
 };
 
@@ -299,7 +330,7 @@ const getParticipants = async (req, res) => {
   if (!id) createError("Chat id missing", 400);
   const chat = await Chat.findById(id).populate({
     path: "participants",
-    select: "_id avatar status firstName lastName",
+    select: "_id avatar status firstName lastName phone",
   });
   if (!chat) createError("Error occurred", 400);
   res.json(chat.toJSON().participants);
@@ -310,7 +341,7 @@ const getUser = async (req, res) => {
   if (!id) createError("User id missing", 400);
   const user = await User.findById(
     id,
-    "_id firstName lastName status isActive lastConnected avatar"
+    "_id firstName lastName status isActive lastConnected avatar phone"
   ).lean();
 
   res.json(user);
