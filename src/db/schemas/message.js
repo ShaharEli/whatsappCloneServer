@@ -16,7 +16,7 @@ const messageDbSchema = new mongoose.Schema(
     type: {
       type: String,
       default: "text",
-      enum: ["text", "voice", "video", "image", "contact"],
+      enum: ["text", "voice", "video", "image", "contact", "system"],
     },
     seenBy: {
       ref: "User",

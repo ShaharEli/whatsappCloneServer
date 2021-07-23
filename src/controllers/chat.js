@@ -102,10 +102,21 @@ const createGroupChat = async (
     .populate({ path: "participants", select: "-password -email -avatar" })
     .execPopulate();
   const io = req.app.get("socketio");
-  io.to(getSocketsList(newChat, userId)).emit("newMessage", {
-    message: `${userFullName} added you`, //TODO create real message doc
-    chat: newChat,
-  });
+  for (let p of newChat.participants) {
+    if (p._id === req.userId) continue;
+    const messageToSend = new Message({
+      content: `${userFullName} added ${p.firstName} ${p.lastName}`,
+      type: "system",
+      chatId: newChat._id,
+      by: req.userId,
+    });
+    const newMessage = await messageToSend.save();
+    io.to(p.socketId).emit("newMessage", {
+      message: newMessage, //TODO create real message doc
+      //TODO add notification
+      chat: newChat,
+    });
+  }
   res.json({ newChat });
 };
 
@@ -244,19 +255,23 @@ const createMsg = async (req, res) => {
       ? `${senderName}: ${newMessage.content}`
       : newMessage.content;
 
-  await sendMessage(
-    getTokensList(chat, req.userId),
-    {
-      chatId,
-      type: "newMessage",
-      title,
-      body,
-    },
-    {
-      title,
-      body,
-    }
-  );
+  const fbTokenList = getTokensList(chat, req.userId);
+  if (fbTokenList.length) {
+    await sendMessage(
+      fbTokenList,
+      {
+        chatId,
+        type: "newMessage",
+        title,
+        body,
+      },
+      {
+        title,
+        body,
+      }
+    );
+  }
+
   res.json({ newMessage, chat });
 };
 
@@ -269,7 +284,14 @@ const modifyChat = async (req, res) => {
     addAdmin,
     removeAdmin,
   } = req.body;
+  const io = req.app.get("socketio");
+
   if (!id) createError("Error occurred", 400);
+  const chatToBeUpdated = await Chat.findById(id);
+  if (!chatToBeUpdated || !chatToBeUpdated.participants.includes(req.userId))
+    createError("Error occurred", 400);
+
+  const isUserAdmin = (user) => chatToBeUpdated?.admins?.includes(user);
   const payload = {};
   if (typeof withNotifications === "boolean") {
     if (withNotifications) {
@@ -282,29 +304,49 @@ const modifyChat = async (req, res) => {
       };
     }
   }
-  if (removeParticipant) {
+  if (removeParticipant && isUserAdmin(req.userId)) {
     payload.$pull = {
       participants: { $in: [removeParticipant] },
       admins: { $in: [removeParticipant] },
     };
   }
-  if (addParticipants) {
+  if (addParticipants && isUserAdmin(req.userId)) {
     payload.$addToSet = {
-      participants: addParticipants,
+      participants: Array.isArray(addParticipants)
+        ? addParticipants
+        : [addParticipants],
     };
   }
-  if (addAdmin) {
+  if (addAdmin && isUserAdmin(req.userId)) {
     payload.$addToSet = {
       admins: addAdmin,
     };
   }
-  if (removeAdmin) {
+  if (
+    removeAdmin &&
+    isUserAdmin(req.userId) &&
+    isUserAdmin(removeAdmin) &&
+    chatToBeUpdated?.mainAdmin !== removeAdmin
+  ) {
     payload.$pull = {
       admins: { $in: [removeAdmin] },
     };
   }
-  const chat = await Chat.findByIdAndUpdate(id, payload, { new: true });
-  // TODO socket updates
+  const chat = await Chat.findByIdAndUpdate(id, payload, {
+    new: true,
+  })
+    .populate({
+      path: "participants",
+      select: "_id avatar status firstName lastName phone",
+    })
+    .populate({
+      path: "lastMessage",
+      populate: {
+        path: "by",
+        select: "_id firstName lastName",
+      },
+    });
+  io.to(getSocketsList(chat, req.userId)).emit("chatChanged", chat);
   res.json(chat);
 };
 
