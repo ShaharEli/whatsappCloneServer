@@ -87,6 +87,8 @@ const createGroupChat = async (
   name,
   userFullName
 ) => {
+  console.log(participants);
+  if (!participants.length) createError("Error occurred", 400);
   const payload = {
     participants: [...participants, userId],
     mainAdmin: userId,
@@ -208,7 +210,6 @@ const createMsg = async (req, res) => {
   const { message = "", type, chatId, media = null } = req.body;
   if (!media && !message) createError("Error occurred", 400);
   if (!type || !chatId) createError("Error occurred", 400);
-
   const payload = {
     type,
     chatId,
@@ -247,6 +248,7 @@ const createMsg = async (req, res) => {
     message: newMessage,
     chat,
   });
+
   const sender = chat.participants.find(({ _id }) => _id == req.userId);
   const senderName = `${sender.firstName} ${sender.lastName}`;
   const title = chat.name ? chat.name : senderName;

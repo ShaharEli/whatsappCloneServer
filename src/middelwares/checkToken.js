@@ -11,7 +11,10 @@ const checkToken = (req, res, next) => {
     if (err) {
       return res.status(403).json({ error: err });
     }
-    req.userId = decoded.userId?.userId;
+    req.userId =
+      typeof decoded.userId === "object"
+        ? decoded.userId?.userId
+        : decoded.userId;
     next();
   });
 };

@@ -27,7 +27,6 @@ const logErrorToService = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  console.log("here");
   const { password, phone } = req.body;
   if (!password || !phone) createError("content missing", 400);
   const user = await User.findOne({ phone });
